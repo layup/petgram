@@ -1,5 +1,12 @@
 # PET GRAM 
 
-# Technologies 
+### Technologies 
+ReactJS
+ReduxJS
+Firebase
+ExpressJS
+TailwindCSS
+MongoDB
 
-# Features 
+
+### Features 
