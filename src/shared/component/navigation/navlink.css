@@ -1,0 +1,4 @@
+.nav-links li {
+    @apply  p-4 grid content-center text-gray-700 hover:bg-slate-100  hover:cursor-pointer 
+    
+}
