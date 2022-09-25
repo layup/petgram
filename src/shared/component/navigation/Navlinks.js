@@ -20,7 +20,7 @@ function Navlinks() {
                 }
 
             </button>
-            <ul className={` nav-links bg-gray-200 border flex-col ${hamburgerOpen ? "" : "hidden "} lg:flex lg:flex-row`}>
+            <ul className={`nav-links flex-col ${hamburgerOpen ? "" : "hidden "} lg:flex lg:flex-row`}>
                 <li>
                     Home
                 </li>
