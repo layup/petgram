@@ -1,9 +1,11 @@
 import React, { useState} from 'react'
+
 import { NavLink } from 'react-router-dom'
 import { MdMenu } from "react-icons/md";
 import { MdClose } from "react-icons/md"
  
-function Navlinks() {
+
+const  Navlinks = () => {
 
     const [hamburgerOpen, setHamburgerOpen] = useState(false); 
 
@@ -20,6 +22,7 @@ function Navlinks() {
                 }
 
             </button>
+
             <ul className={`nav-links flex-col ${hamburgerOpen ? "" : "hidden "} lg:flex lg:flex-row`}>
                 <li>
                     Home
