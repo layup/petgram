@@ -106,10 +106,10 @@ const Post = (props) => {
                     </div>
                     <form className='border-t-2'>
                         <input 
-                            className='w-5/6 p-2 rounded-bl-xl focus:border-white bg-slate-50'
+                            className='w-5/6 p-2 rounded-bl-xl focus:outline-none bg-slate-50'
                             placeholder='Add a comment' 
                         /> 
-                        <button className=' w-1/6 p-2 '> Post</button>
+                        <button className=' w-1/6 p-2 text-blue-500'> Post</button>
                     </form>
                 </div>
             </div>

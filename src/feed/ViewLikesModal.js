@@ -15,6 +15,7 @@ const LikesModalOverlay = (props) => {
             </div>
             <div className="bg-slate-100 w-full p-4 rounded-2xl flex flex-col items-center">
                 <h1>Likes</h1>
+                <p>Total Likes: </p>
                 <ul>
                     {
                         props.likes.map((users, i) => {

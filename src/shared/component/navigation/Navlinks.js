@@ -14,7 +14,7 @@ const  Navlinks = () => {
     }
 
     return (
-        <div className=''>
+        <div className=' bg-orange-200 lg:w-2/6'>
             <button className='lg:hidden p-2 ' onClick={toggleHamburgeMenu}>
                 {hamburgerOpen ? 
                     <MdClose className='h-10 w-10'/>: 
@@ -23,7 +23,7 @@ const  Navlinks = () => {
 
             </button>
 
-            <ul className={`nav-links flex-col ${hamburgerOpen ? "" : "hidden "} lg:flex lg:flex-row`}>
+            <ul className={`nav-links flex-col ${hamburgerOpen ? "" : "hidden "} lg:flex lg:flex-row `}>
                 <li>
                     Home
                 </li>
@@ -31,7 +31,9 @@ const  Navlinks = () => {
                 <li>
                     Profile
                 </li>
-
+                <li>
+                    Settings 
+                </li>
                 <li>
                     Sign In 
                 </li>

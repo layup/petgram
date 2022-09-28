@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 import Homepage from './feed/Homepage'
 import MainNavBar from './shared/component/navigation/MainNavbar';
