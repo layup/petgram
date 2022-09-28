@@ -1,12 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ReactDOM from 'react-dom'
 
-import Backdrop from "../shared/component/UIElement/Backdrop";
+import Backdrop from "../../shared/component/UIElement/Backdrop";
 import {GrClose} from 'react-icons/gr'
 
 const CommentModalOverlay = (props) => {
     const content = (
-        <div className='modal fixed w-2/4 top-72 left-1/4 z-40' >
+        <div className='modal fixed w-2/4 top-64 left-1/4 z-40' >
             <div className=" flex justify-end">
                 <button onClick={props.onCancel}>
                     <GrClose className="h-6 w-6"/>
@@ -37,9 +37,9 @@ const CommentModalOverlay = (props) => {
                         </div>
 
                         <ul className="">
-                             {props.comments.map((user) => {
+                             {props.comments.map((user, i) => {
                                 return (
-                                     <li className="px-2 py-1 flex">
+                                     <li className="px-2 py-1 flex" key={i}>
                                         <p className="font-semibold">{user.username}</p> 
                                         <p>: {user.comment}</p>
                                     </li>
@@ -68,6 +68,17 @@ const CommentModalOverlay = (props) => {
 
 
 const ViewCommentsModal = (props) => {
+
+
+    useEffect(() => {
+        // Your code here
+        console.log(props.show)
+        if(props.show){
+            document.body.style.overflow = 'hidden';
+        }
+        document.body.style.overflow = 'unset';
+        
+    }, [props.show]);
 
     
     return (

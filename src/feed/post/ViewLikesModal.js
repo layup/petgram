@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom'
 
-import Backdrop from "../shared/component/UIElement/Backdrop";
+import Backdrop from "../../shared/component/UIElement/Backdrop";
 import {GrClose} from 'react-icons/gr'
 
 const LikesModalOverlay = (props) => {

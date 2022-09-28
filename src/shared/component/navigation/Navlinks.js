@@ -1,6 +1,6 @@
 import React, { useState} from 'react'
 
-import { NavLink } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { MdMenu } from "react-icons/md";
 import { MdClose } from "react-icons/md"
  
@@ -23,26 +23,26 @@ const  Navlinks = () => {
 
             </button>
 
-            <ul className={`nav-links flex-col ${hamburgerOpen ? "" : "hidden "} lg:flex lg:flex-row `}>
-                <li>
-                    Home
-                </li>
-
-                <li>
-                    Profile
-                </li>
-                <li>
-                    Settings 
-                </li>
-                <li>
-                    Sign In 
-                </li>
-
-                <li>
-                    Logout
-                </li>
+            <nav>
+                <ul className={`nav-links flex-col ${hamburgerOpen ? "" : "hidden "} lg:flex lg:flex-row `}>
+                    <li>
+                        <Link to='/'>Home</Link>
+                    </li>
+                    <li>
+                        <Link to='/:profileId'>Profile</Link>
+                    </li>
+                    <li>
+                        <Link to='/settings'>Settings</Link> 
+                    </li>
+                    <li>
+                        Sign In 
+                    </li>
+                    <li>
+                        Logout
+                    </li>
+                </ul> 
             
-            </ul>
+            </nav>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Post from './Post'
+import Post from './post/Post'
 
 const FAKE_POST_DATA = [
   {
@@ -48,6 +48,16 @@ export class Homepage extends Component {
     return (
       <div className='pt-16 flex justify-center h-full'>
         <div className=''>
+          <Post 
+            title={FAKE_POST_DATA[0].title} 
+            description={FAKE_POST_DATA[0].description}
+            totalLikes={FAKE_POST_DATA[0].totalLikes}
+            image={FAKE_POST_DATA[0].image}
+            profile={FAKE_POST_DATA[0].profile_pic}
+            username={FAKE_POST_DATA[0].username}
+            comments={FAKE_POST_DATA[0].comments}
+            likes={FAKE_POST_DATA[0].likes}
+          />
           <Post 
             title={FAKE_POST_DATA[0].title} 
             description={FAKE_POST_DATA[0].description}
