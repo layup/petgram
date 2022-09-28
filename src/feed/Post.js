@@ -1,6 +1,8 @@
 import React, { useState}  from 'react'
-import { ReactDOM } from 'react-dom';
-import ViewComments from './ViewComments';
+
+import Comments from './Comments';
+import ViewLikeModal from './ViewLikesModal';
+import ViewCommentsModal from './ViewCommentsModal';
 
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from 'react-icons/ai'
@@ -12,26 +14,47 @@ import Modal from '../shared/component/UIElement/Modal';
 const Post = (props) => {
 
     const [likePost, setLikePost] = useState(false); 
+    const [viewLikes, setViewLikes] = useState(false); 
     const [viewComment, setViewComment] = useState(false);
  
-    const toggleLike = () => {
+    const toggleLikePost = () => {
         setLikePost(!likePost)
+    }
+    
+    const toggleViewLike = () => {
+        setViewLikes(!viewLikes)
     }
     const toggleViewComment = () => {
         setViewComment(!viewComment)
     }
 
+
     return (
         <React.Fragment>
             {viewComment && 
-                <Modal 
-                    
+                <ViewCommentsModal
+                    {...props} 
                     onCancel={toggleViewComment}
                     show={viewComment}
                 />
             }
-            <div className='bg-grey-100 w-96 h-min my-5 bg-slate-100 border-2'>
-                <div>
+            {viewLikes && 
+                <ViewLikeModal 
+                    likes={props.likes}
+                    onCancel={toggleViewLike}
+                    show={viewLikes} 
+                />
+            }
+            <div className='bg-grey-100 w-96 h-min mb-5 bg-slate-50 border-2 md:rounded-xl'>
+                <div className='flex p-2 items-center'> 
+                    <img 
+                        className='h-10 w-10 rounded-full'
+                        src={props.profile}
+                        alt='profile'
+                    /> 
+                    <p className='px-2 font-semibold'>{props.username}</p>
+                </div>
+                <div className='border-y-2'>
                     <img 
                         className='' 
                         src={props.image}
@@ -39,11 +62,11 @@ const Post = (props) => {
                     /> 
                 </div>
                 <div>
-                    <div className='flex justify-between px-2 pt-1'>
+                    <div className='flex justify-between p-2'>
                         <div className='grid grid-cols-3 w-2/6'>
                             <button 
                                 className='w-min' 
-                                onClick={toggleLike} 
+                                onClick={toggleLikePost} 
                             >
                                 {likePost ? 
                                     <AiFillHeart className='h-6 w-6 '/>:
@@ -51,19 +74,19 @@ const Post = (props) => {
                                 }
                             </button>
                             <button 
-                                className='w-min' 
+                                className='w-min ' 
                                 onClick={toggleViewComment}
                             >
                                 <FaRegComment className='h-5 w-5 hover:cursor-pointer' />
                             </button>
 
                         </div> 
-                        <a 
-                            className='text-blue-500 px-2' 
-                            href='/'
+                        <p
+                            className='text-blue-500 px-2 hover:text-blue-600 cursor-pointer'  
+                            onClick={toggleViewLike}
                         >
-                            {props.likes} Likes
-                        </a>
+                            {props.totalLikes} Likes
+                        </p>
                     </div>
 
                     <div className='flex px-2 pb-1'>
@@ -76,16 +99,17 @@ const Post = (props) => {
                         <p>{props.description.substring(0,29)}...</p>
                     </div>
                     <div>
-                        <ViewComments
+                        <Comments
                             comments={props.comments}
+                            showComments={toggleViewComment}
                         />
                     </div>
-                    <form className=''>
+                    <form className='border-t-2'>
                         <input 
-                            className='w-5/6 p-2'
+                            className='w-5/6 p-2 rounded-bl-xl focus:border-white bg-slate-50'
                             placeholder='Add a comment' 
                         /> 
-                        <button className='border-2 w-1/6 p-2 '> Post</button>
+                        <button className=' w-1/6 p-2 '> Post</button>
                     </form>
                 </div>
             </div>
