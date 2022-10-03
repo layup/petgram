@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Post from './post/Post'
+import Post from '../post/Post'
 
 const FAKE_POST_DATA = [
   {

@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import { Route, BrowserRouter, Navigate, Routes} from 'react-router-dom';
 
-import Homepage from './feed/Homepage'
-import Profile from './profile/Profile';
+import Homepage from './posts/pages/Homepage'
+import Profile from './user/pages/Profile';
 import MainNavBar from './shared/component/navigation/MainNavbar';
-import NewPost from './feed/pages/NewPost'
-import UpdatePost from './feed/pages/UpdatePost'
-import Settings from './profile/Settings';
+import NewPost from './posts/pages/NewPost'
+import UpdatePost from './posts/pages/UpdatePost'
 
 
 /* TODO: 
@@ -25,9 +24,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/:userId' element={<Profile />} /> 
-          <Route path='/new' element={<NewPost />} /> 
-          <Route path='/:postId/update' element={<UpdatePost />} />
-        <Route path='/settings' element={<Settings />} /> 
+        <Route path='/:userId/new' element={<NewPost />} /> 
+        <Route path='/:userId/:postId/update' element={<UpdatePost />} />
         <Route
           path="*"
           element={<Navigate to="/" />}
