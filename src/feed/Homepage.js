@@ -46,7 +46,7 @@ export class Homepage extends Component {
 
   render() {
     return (
-      <div className='pt-16 flex justify-center h-full'>
+      <div className='pt-16 flex justify-center h-full bg-slate-50 '>
         <div className=''>
           <Post 
             title={FAKE_POST_DATA[0].title} 

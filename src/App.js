@@ -39,8 +39,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <MainNavBar />
-        <div>
+      <MainNavBar/>
+        <div >
           {routes}
         </div>
     </BrowserRouter>

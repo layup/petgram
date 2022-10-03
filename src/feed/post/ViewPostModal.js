@@ -12,7 +12,7 @@ const CommentModalOverlay = (props) => {
                     <GrClose className="h-6 w-6"/>
                 </button>
             </div>
-            <div className="bg-slate-100 w-full p-4 rounded-2xl flex">
+            <div className="bg-slate-100 w-full flex">
                 <div className="w-2/4 h-96 bg-black flex  ">
                     <img 
                         className='object-contain' 

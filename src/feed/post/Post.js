@@ -4,7 +4,7 @@ import PostLikes from './PostLikes';
 import PostHeader from './PostHeader';
 import PostComments from './PostComments';
 import ViewLikeModal from './ViewLikesModal';
-import ViewCommentsModal from './ViewCommentsModal';
+import ViewPostModal from './ViewPostModal';
 
 /*TODO: 
 * fix user and comment total length, so overflows to next screen 
@@ -39,7 +39,7 @@ const Post = (props) => {
     return (
         <React.Fragment>
             {viewComment && 
-                <ViewCommentsModal
+                <ViewPostModal
                     {...props} 
                     onCancel={toggleViewComment}
                     show={viewComment}
