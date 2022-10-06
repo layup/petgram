@@ -52,12 +52,12 @@ const Post = (props) => {
                     show={viewLikes} 
                 />
             }
-            <div className='bg-grey-100 w-96 h-min mb-5 bg-slate-50 border-2 md:rounded-xl'>
+            <div className='bg-grey-100 w-full sm:w-96 h-min mb-5 bg-slate-50 border-2 md:rounded-xl'>
                 <PostHeader 
                     username={props.username} 
                     profile={props.profile} 
                 /> 
-                <div className='border-y-2'>
+                <div className='border-y-2 grid grid-cols-1'>
                     <img 
                         className='' 
                         src={props.image}

@@ -4,6 +4,7 @@ h1 {
     @apply text-2xl font-extrabold; 
 }
 
+
 @import "tailwindcss/components"; 
 @import './shared/component/components.css'; 
 

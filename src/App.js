@@ -6,7 +6,7 @@ import Profile from './user/pages/Profile';
 import MainNavBar from './shared/component/navigation/MainNavbar';
 import NewPost from './posts/pages/NewPost'
 import UpdatePost from './posts/pages/UpdatePost'
-
+import EditProfile from './user/pages/EditProfile';
 
 /* TODO: 
 * 404 not found page 
@@ -25,7 +25,9 @@ function App() {
         <Route path='/' element={<Homepage />} />
         <Route path='/:userId' element={<Profile />} /> 
         <Route path='/:userId/new' element={<NewPost />} /> 
+        <Route path='/:userId/edit' element={<EditProfile />} />
         <Route path='/:userId/:postId/update' element={<UpdatePost />} />
+        
         <Route
           path="*"
           element={<Navigate to="/" />}

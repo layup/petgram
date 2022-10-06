@@ -6,9 +6,9 @@ import Navlinks from './Navlinks'
 function MainNavBar() {
   
   return (
-    <div className='mt-0 fixed w-full z-10 top-0 bg-white drop-shadow-sm lg:flex justify-center '> 
-      <div className='w-full lg:flex lg:justify-between lg:w-3/4'>
-        <h1 className='font-bold text-blue-500 hidden lg:content-center w-2/6 bg-red-100 lg:justify-items-center lg:grid lg:w-auto '>PetGram</h1>
+    <div className='mt-0 fixed w-full z-10 top-0 bg-white drop-shadow-sm shadow-sm lg:flex justify-center bg-light-blue-100'> 
+      <div className='w-full flex j lg:w-4/5 xl:w-3/5 '>
+        <h1 className='font-bold text-gray-700  basis-1/4 grid content-center text-center p-2'>PetGram</h1>
         <NavSearch />
         <Navlinks />  
       </div>

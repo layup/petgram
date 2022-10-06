@@ -19,36 +19,35 @@ const  Navlinks = () => {
     }
 
     return (
-        <div className=' bg-orange-200 '>
-            <button className='lg:hidden p-2 ' onClick={toggleHamburgeMenu}>
+        <div className='basis-3/4 sm:basis-1/4 lg:pr-10 '>
+            {/*<button className='lg:hidden p-2 ' onClick={toggleHamburgeMenu}>
                 {hamburgerOpen ? 
                     <MdClose className='h-10 w-10'/>: 
                     <MdMenu className='h-10 w-10'/>
                 }
 
             </button>
+            */}
 
             <nav>
-                <ul className={`nav-links flex-col ${hamburgerOpen ? "" : "hidden "} lg:flex lg:flex-row `}>
+                {/*   <ul className={`nav-links flex-col ${hamburgerOpen ? "" : "hidden "} lg:flex lg:flex-row `}> */}
+                <ul className={`nav-links flex justify-end`}>
                     <li>
                         <Link to='/'>
-                            <AiOutlineHome className='h-8 w-8'/>
+                            <AiOutlineHome className='h-7 w-7'/>
                         </Link>
                     </li>
                     <li>
                         <Link to='/:userId/new'>
-                            <AiOutlinePlusCircle className='h-8 w-8'/>
+                            <AiOutlinePlusCircle className='h-7 w-7'/>
                         </Link>
                     </li>
                     <li>
                         <Link to='/:userId'>
-                            <CgProfile className='h-8 w-8'/>
+                            <CgProfile className='h-7 w-7'/>
                         </Link>
                     </li>
-
-
                 </ul> 
-                
             </nav>
         </div>
     )
